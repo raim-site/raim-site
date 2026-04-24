@@ -3,46 +3,67 @@
   height: 100vh;
   overflow: hidden;
 }
-
+<div class="slide active">
 .slider {
-  height: 100%;
   position: relative;
+  height: 100%;
 }
 
 .slide {
   position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
+
   background-size: cover;
   background-position: center;
+
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
 
 .slide.active {
   opacity: 1;
+  z-index: 1;
 }
 
+/* DARK OVERLAY */
+.slide::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+}
+
+/* TEXT CENTER */
 .content {
   position: absolute;
-  bottom: 20%;
-  left: 10%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
   color: white;
+  width: 90%;
 }
 
 .content h1 {
-  font-size: 50px;
-  margin-bottom: 10px;
+  font-size: 28px;
 }
 
 .content p {
-  font-size: 18px;
-  margin-bottom: 20px;
+  font-size: 16px;
+  margin: 10px 0;
 }
 
+/* BUTTON */
 .btn {
-  background: orange;
+  background: #22c55e;
   padding: 10px 20px;
   color: white;
   text-decoration: none;
+  border-radius: 5px;
 }
