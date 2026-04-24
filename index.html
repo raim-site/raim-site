@@ -7,136 +7,195 @@
 
 <style>
 body {
-  margin:0;
+  margin: 0;
   font-family: Arial, sans-serif;
-  background:#0b0b0b;
-  color:white;
+  background: #000;
+  color: #fff;
 }
 
-/* HEADER */
-  
-header {
-  <nav style="text-align:center; margin:10px;">
-<a href="index.html">Home</a> |
-<a href="about.html">About</a> |
-<a href="services.html">Services</a> |
-<a href="contact.html">Contact</a>
-</nav>
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:20px;
-  background:#111;
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #111;
 }
 
-.logo img {
-  height:50px;
+.logo {
+  height: 50px;
 }
 
 /* HERO */
-.<section class="hero">
-  <div class="overlay">
-    <h1>Building the Future in Saudi Arabia 🇸🇦</h1>
-    <p>Excellence in Civil, MEP & Maintenance</p>
-    <a href="contact.html" class="btn">Get a Quote</a>
-  </div>
-</section>
+.hero {
+  position: relative;
+  height: 90vh;
+  background: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.6);
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+  animation: fadeIn 1.5s ease;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: orange;
+  padding: 12px 25px;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 /* SERVICES */
 .services {
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  padding:60px 20px;
-  flex-wrap:wrap;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .card {
-  background:#1a1a1a;
-  padding:30px;
-  border-radius:10px;
-  width:250px;
-  text-align:center;
+  background: #111;
+  padding: 30px;
+  border-radius: 10px;
+  width: 250px;
 }
 
 /* CONTACT */
 .contact {
-  text-align:center;
-  padding:60px 20px;
+  padding: 80px 20px;
+  text-align: center;
 }
 
-input, textarea {
-  padding:10px;
-  width:220px;
-  border:none;
-  border-radius:5px;
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  margin-top: 30px;
+  flex-wrap: wrap;
 }
 
-button {
-  background:#f5a623;
-  border:none;
-  padding:10px 20px;
-  border-radius:5px;
-  cursor:pointer;
+.contact-info {
+  text-align: left;
+  max-width: 300px;
 }
 
-/* FOOTER */
-footer {
-  text-align:center;
-  padding:20px;
-  background:#111;
+.contact-info p {
+  margin-bottom: 15px;
+  opacity: 0.8;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+form input, form textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+}
+
+form button {
+  background: orange;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
 }
 </style>
-</head>
 
+</head>
 <body>
 
-<header>
-  <div class="logo">
-    <img src="logo.png">
-  </div>
-</header>
+<!-- NAVBAR -->
+<div class="navbar">
+  <img src="logo.png" class="logo">
+</div>
 
+<!-- HERO -->
 <section class="hero">
-  <h1>Building the Future in Saudi Arabia 🇸🇦</h1>
-  <p>Building Excellence. Delivering Trust.</p>
-  <a class="btn" href="#contact">Get a Quote</a>
+  <div class="overlay">
+    <h1>Building the Future in Saudi Arabia 🇸🇦</h1>
+    <p>Excellence in Civil, MEP & Maintenance</p>
+    <a href="#contact" class="btn">Get a Quote</a>
+  </div>
 </section>
 
+<!-- SERVICES -->
 <section class="services">
-  <div class="card">
-    <h3>🏗 Civil</h3>
-    <p>Complete civil construction services</p>
-  </div>
+  <h2>Our Services</h2>
 
-  <div class="card">
-    <h3>⚡ MEP</h3>
-    <p>Mechanical, Electrical & Plumbing solutions</p>
-  </div>
+  <div class="cards">
+    <div class="card">
+      <h3>🏗 Civil</h3>
+      <p>Complete civil construction services</p>
+    </div>
 
-  <div class="card">
-    <h3>🛠 Maintenance</h3>
-    <p>Operation & maintenance services</p>
+    <div class="card">
+      <h3>⚡ MEP</h3>
+      <p>Mechanical, Electrical & Plumbing solutions</p>
+    </div>
+
+    <div class="card">
+      <h3>🛠 Maintenance</h3>
+      <p>Operation & maintenance services</p>
+    </div>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section class="contact" id="contact">
   <h2>Contact Us</h2>
-  <p>📞 +966 53 914 1762</p>
-  <p>📧 info@raimgroup.com</p>
 
-  <form action="https://formspree.io/f/mjgjjlnw" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required><br><br>
-    <input type="email" name="email" placeholder="Your Email" required><br><br>
-    <textarea name="message" placeholder="Your Message" required></textarea><br><br>
-    <button type="submit">Send Message</button>
-  </form>
+  <div class="contact-container">
+
+    <div class="contact-info">
+      <p>📞 +966 53 914 1762</p>
+      <p>📧 info@raimgroup.com</p>
+      <p>Saudi Arabia</p>
+    </div>
+
+    <form action="https://formspree.io/f/mjgjjlnw" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+  </div>
 </section>
-
-<footer>
-  © 2026 Raim International
-</footer>
 
 </body>
 </html>
