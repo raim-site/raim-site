@@ -7,71 +7,9 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-<st.portfolio {
-  padding: 70px 20px;
-  background: #0b0f19;
-  text-align: center;
-}
+<style>
 
-.portfolio h2 {
-  font-family: 'Azonix';
-  margin-bottom: 20px;
-}
-
-/* FILTER */
-.filters {
-  margin-bottom: 30px;
-}
-
-.filters button {
-  margin: 5px;
-  padding: 8px 15px;
-  border: none;
-  background: #111827;
-  color: white;
-  cursor: pointer;
-}
-
-.filters button:hover {
-  background: #f59e0b;
-  color: black;
-}
-
-/* GRID */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.portfolio-card {
-  background: #111827;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: 0.3s;
-}
-
-.portfolio-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.portfolio-card h3 {
-  margin: 10px 0 5px;
-}
-
-.portfolio-card p {
-  margin-bottom: 15px;
-  font-size: 14px;
-  opacity: 0.7;
-}
-
-.portfolio-card:hover {
-  transform: scale(1.05);
-}yle>
-
-/* CUSTOM FONT */
+/* FONT */
 @font-face {
   font-family: 'Azonix';
   src: url('Azonix.otf');
@@ -83,7 +21,6 @@ body {
   font-family:'Poppins', sans-serif;
   background:#0b0f19;
   color:white;
-  scroll-behavior:smooth;
 }
 
 /* NAVBAR */
@@ -91,18 +28,10 @@ body {
   position:fixed;
   width:100%;
   top:0;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:12px 30px;
-  background:rgba(10,15,30,0.85);
-  backdrop-filter:blur(10px);
-  z-index:999;
+  padding:15px;
 }
 
-.logo {
-  height:60px;
-}
+.logo { height:60px; }
 
 /* HERO */
 .hero {
@@ -111,135 +40,51 @@ body {
   align-items:center;
   justify-content:center;
   text-align:center;
-  background:
-  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)),
   url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover;
-  padding:20px;
 }
 
 .hero h1 {
   font-family:'Azonix';
-  font-size:46px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  animation:fadeUp 1s ease;
 }
 
-.hero p {
-  margin:20px 0;
-  opacity:0.8;
-  animation:fadeUp 1.5s ease;
-}
-
-.btn {
-  background:#f59e0b;
-  padding:14px 28px;
-  border-radius:6px;
-  color:#000;
-  text-decoration:none;
-  font-weight:600;
-  animation:fadeUp 2s ease;
-}
-
-/* SECTIONS */
-section {
-  padding:80px 40px;
-}
-
-h2 {
-  font-family:'Azonix';
-  text-align:center;
-  margin-bottom:30px;
-}
-
-/* CARDS */
-.services, .projects {
+/* SERVICES */
+.services {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
 }
 
-.card, .project {
-  background:rgba(255,255,255,0.03);
-  padding:25px;
-  border-radius:12px;
-  transition:0.4s;
-  opacity:0;
-  transform:translateY(30px);
-}
-
-.card:hover, .project:hover {
-  transform:translateY(-5px);
-  box-shadow:0 0 15px rgba(245,158,11,0.4);
-}
-
-/* CONTACT */
-.contact-container {
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  flex-wrap:wrap;
-}
-
-form {
-  display:flex;
-  flex-direction:column;
-  width:300px;
-}
-
-form input, form textarea {
-  margin-bottom:10px;
-  padding:10px;
-  border:none;
-  border-radius:5px;
-}
-
-/* STICKY BAR */
-.sticky-bar {
-  position:fixed;
-  bottom:0;
-  width:100%;
-  display:flex;
-  background:#0f172a;
-}
-
-.sticky-bar a {
-  flex:1;
+/* PORTFOLIO */
+.portfolio {
+  padding:70px 20px;
   text-align:center;
-  padding:12px;
-  color:white;
-  text-decoration:none;
 }
 
-.sticky-bar a:last-child {
-  background:#25D366;
+.filters button {
+  margin:5px;
+  padding:8px;
 }
 
-/* POPUP */
-.exit-popup {
-  position:fixed;
-  top:30%;
-  left:50%;
-  transform:translateX(-50%);
-  background:#111;
-  padding:20px;
+.portfolio-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.portfolio-card {
+  background:#111827;
   border-radius:10px;
-  display:none;
-  text-align:center;
 }
 
-/* ANIMATION */
-@keyframes fadeUp {
-  from {opacity:0; transform:translateY(30px);}
-  to {opacity:1; transform:translateY(0);}
+.portfolio-card img {
+  width:100%;
+  height:180px;
+  object-fit:cover;
 }
 
 /* MOBILE */
 @media(max-width:768px){
-  .hero {height:auto; padding:80px 20px;}
-  .hero h1 {font-size:26px;}
-  section {padding:50px 20px;}
-  .logo {height:45px;}
+  .hero {height:auto;}
 }
 
 </style>
@@ -247,139 +92,51 @@ form input, form textarea {
 
 <body>
 
-<!-- NAVBAR -->
 <div class="navbar">
   <img src="logo.png" class="logo">
 </div>
 
-<!-- HERO -->
 <section class="hero">
   <div>
     <h1>Leading Contracting & MEP Solutions</h1>
-    <p>NEOM • ARAMCO • RIYADH METRO</p>
-    <a href="#contact" class="btn">Request a Quote</a>
   </div>
 </section>
 
-<!-- SERVICES -->
 <section>
   <h2>Services</h2>
   <div class="services">
-    <div class="card">Civil Construction</div>
-    <div class="card">MEP Solutions</div>
-    <div class="card">Maintenance</div>
+    <div>Civil</div>
+    <div>MEP</div>
+    <div>Maintenance</div>
   </div>
 </section>
-<!-- PRO PORTFOLIO -->
-<section class="portfolio">
-  <h2>Our Projects</h2>
 
-  <!-- FILTER -->
+<!-- PORTFOLIO -->
+<section class="portfolio">
+  <h2>Projects</h2>
+
   <div class="filters">
     <button onclick="filterSelection('all')">All</button>
     <button onclick="filterSelection('civil')">Civil</button>
     <button onclick="filterSelection('mep')">MEP</button>
-    <button onclick="filterSelection('maintenance')">Maintenance</button>
   </div>
 
-  <!-- GRID -->
   <div class="portfolio-grid">
 
     <div class="portfolio-card civil">
       <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
-      <h3>NEOM Hospital</h3>
-      <p>Civil • 2023</p>
+      <h3>NEOM</h3>
     </div>
 
     <div class="portfolio-card mep">
       <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab">
-      <h3>Riyadh Metro</h3>
-      <p>MEP • 2018</p>
-    </div>
-
-    <div class="portfolio-card maintenance">
-      <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
-      <h3>KAFD Maintenance</h3>
-      <p>Maintenance • 2023</p>
-    </div>
-
-    <div class="portfolio-card civil">
-      <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231">
-      <h3>Aramco Stadium</h3>
-      <p>Civil • 2025</p>
-    </div>
-
-    <div class="portfolio-card mep">
-      <img src="https://images.unsplash.com/photo-1529429617124-95b109e86bb8">
-      <h3>Trojena Project</h3>
-      <p>MEP • 2024</p>
+      <h3>Metro</h3>
     </div>
 
   </div>
 </section>
-<!-- PROJECTS -->
-<section>
-  <h2>Projects</h2>
-  <div class="projects">
-    <div class="project">NEOM City Hospital</div>
-    <div class="project">Riyadh Metro</div>
-    <div class="project">Aramco Stadium</div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="contact-container">
-    <div>
-      <p>📞 +966 53 914 1762</p>
-      <p>📧 info@raimgroup.com</p>
-    </div>
-
-    <form action="https://formspree.io/f/mjgjjlnw" method="POST">
-      <input type="text" placeholder="Name">
-      <input type="email" placeholder="Email">
-      <textarea placeholder="Message"></textarea>
-      <button>Send</button>
-    </form>
-  </div>
-</section>
-
-<!-- STICKY BAR -->
-<div class="sticky-bar">
-  <a href="tel:+966539141762">📞 Call</a>
-  <a href="https://wa.me/966539141762">💬 WhatsApp</a>
-</div>
-
-<!-- POPUP -->
-<div class="exit-popup" id="exitPopup">
-  <p>Need help with your project?</p>
-  <a href="https://wa.me/966539141762">Chat Now</a>
-</div>
 
 <script>
-
-// EXIT POPUP
-document.addEventListener("mouseleave", function(e) {
-  if (e.clientY < 10) {
-    document.getElementById("exitPopup").style.display = "block";
-  }
-});
-
-// SCROLL ANIMATION
-const elements = document.querySelectorAll('.card, .project');
-
-window.addEventListener('scroll', () => {
-  elements.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if(top < window.innerHeight - 50){
-      el.style.opacity = 1;
-      el.style.transform = 'translateY(0)';
-    }
-  });
-});
-
-</sc<script>
 function filterSelection(category) {
   let cards = document.getElementsByClassName("portfolio-card");
 
@@ -395,7 +152,7 @@ function filterSelection(category) {
     }
   }
 }
-</script>ript>
+</script>
 
 </body>
 </html>
