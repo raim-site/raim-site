@@ -1,54 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Raim International</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raim International</title>
 
 <style>
 body {
   margin:0;
-  font-family: Arial;
-  background:black;
+  font-family: Arial, sans-serif;
+  background:#0b0b0b;
   color:white;
+  scroll-behavior:smooth;
 }
 
 header {
   display:flex;
   justify-content:space-between;
-  padding:20px;
+  align-items:center;
+  padding:20px 40px;
   background:#111;
+  position:sticky;
+  top:0;
 }
 
-header h2 {
-  color:orange;
+.logo {
+  color:#f5a623;
+  font-size:22px;
+  font-weight:bold;
+}
+
+.btn {
+  background:#f5a623;
+  color:black;
+  padding:10px 20px;
+  text-decoration:none;
+  border-radius:5px;
+  transition:0.3s;
+}
+.btn:hover {
+  background:white;
 }
 
 .hero {
   text-align:center;
-  padding:100px 20px;
+  padding:120px 20px;
+  animation:fadeIn 1.5s ease-in;
 }
 
-.btn {
-  background:orange;
-  padding:10px 20px;
-  color:black;
-  text-decoration:none;
+.hero h1 {
+  font-size:40px;
+}
+
+.hero p {
+  margin:10px 0;
+  color:#ccc;
 }
 
 .services {
   display:flex;
   justify-content:center;
   gap:20px;
+  padding:60px 20px;
   flex-wrap:wrap;
-  padding:50px 20px;
 }
 
 .card {
   background:#1a1a1a;
-  padding:20px;
-  width:250px;
+  padding:30px;
   border-radius:10px;
+  width:250px;
+  text-align:center;
+  transition:0.3s;
+}
+.card:hover {
+  transform:translateY(-10px);
+}
+
+.contact {
+  text-align:center;
+  padding:60px 20px;
 }
 
 footer {
@@ -56,45 +87,60 @@ footer {
   padding:20px;
   background:#111;
 }
+
+@keyframes fadeIn {
+  from {opacity:0; transform:translateY(20px);}
+  to {opacity:1; transform:translateY(0);}
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<h2>RAIM INTERNATIONAL</h2>
-<a href="https://wa.me/966539141762" class="btn">WhatsApp</a>
+  <div class="logo">RAIM INTERNATIONAL</div>
+  <a class="btn" href="https://wa.me/966539141762">WhatsApp</a>
 </header>
 
 <section class="hero">
-<h1>Building the Future in Saudi Arabia 🇸🇦</h1>
-<p>Manpower • Construction • Real Estate</p>
-<br>
-<a href="https://wa.me/966539141762" class="btn">Get a Quote</a>
+  <h1>Building the Future in Saudi Arabia 🇸🇦</h1>
+  <p>YOU CHOSE THE BEST ONE</p>
+  <a class="btn" href="https://wa.me/966539141762">Get a Quote</a>
 </section>
 
 <section class="services">
+  <div class="card">
+    <h3>🏗 Civil</h3>
+    <p>Complete civil construction services</p>
+  </div>
 
-<div class="card">
-<h3>👷 Manpower</h3>
-<p>Skilled & unskilled workforce supply</p>
-</div>
+  <div class="card">
+    <h3>⚡ MEP</h3>
+    <p>Mechanical, Electrical & Plumbing solutions</p>
+  </div>
 
-<div class="card">
-<h3>🏗 Construction</h3>
-<p>Complete building solutions</p>
-</div>
+  <div class="card">
+    <h3>🛠 Operation & Maintenance</h3>
+    <p>Reliable facility maintenance services</p>
+  </div>
+</section>
 
-<div class="card">
-<h3>🏢 Real Estate</h3>
-<p>Buy, sell & invest properties</p>
-</div>
+<section class="contact">
+  <h2>Contact Us</h2>
+  <p>📞 +966 53 914 1762</p>
+  <p>📧 info@raimgroup.com</p>
+
+  <form action="https://formspree.io/f/mjgjjlnw" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required style="padding:10px; width:200px;"><br><br>
+    <input type="email" name="email" placeholder="Your Email" required style="padding:10px; width:200px;"><br><br>
+    <textarea name="message" placeholder="Your Message" required style="padding:10px; width:200px;"></textarea><br><br>
+    <button class="btn">Send Message</button>
+  </form>
 
 </section>
 
 <footer>
-<p>📞 +966 53 914 1762</p>
-<p>📧 info@raimgroup.com</p>
+  © 2026 Raim International
 </footer>
 
 </body>
