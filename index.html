@@ -3,56 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Raim International</title>
+<title>Raim International Contracting</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #0b0b0b;
-  color: #fff;
+  margin:0;
+  font-family:'Poppins', sans-serif;
+  background:#0b0b0b;
+  color:#fff;
 }
 
 /* NAVBAR */
 .navbar {
-  position: sticky;
-  top: 0;
-  background: rgba(15, 23, 42, 0.9);
-  padding: 15px 40px;
+  position:sticky;
+  top:0;
+  background:#0f172a;
+  padding:18px 40px;
 }
+.logo { height:70px; }
 
-.logo { height: 65px; }
-
-/* HERO */
+/* HERO (clean, no box) */
 .hero {
-  height: 90vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+  padding:120px 40px;
+  background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
   url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
 }
 
-.hero h1 { font-size:50px; }
+.hero h1 {
+  font-size:44px;
+  max-width:800px;
+}
 
-/* BUTTON */
+.hero p {
+  margin:20px 0;
+  max-width:600px;
+  opacity:0.85;
+}
+
 .btn {
   background:#f59e0b;
-  padding:14px 30px;
+  padding:12px 26px;
   border-radius:6px;
   color:#000;
   text-decoration:none;
+  font-weight:600;
 }
 
 /* SECTION */
 section { padding:80px 40px; }
 
-/* PROJECT LIST */
+/* TRUST BLOCK */
+.trust {
+  display:flex;
+  gap:50px;
+  flex-wrap:wrap;
+}
+
+.trust-box {
+  flex:1;
+  min-width:250px;
+}
+
+.trust-box h2 {
+  color:#f59e0b;
+  font-size:40px;
+}
+
+/* SERVICES */
+.services {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.service {
+  border-top:2px solid #f59e0b;
+  padding-top:10px;
+}
+
+/* PROJECTS */
 .projects {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -60,19 +91,13 @@ section { padding:80px 40px; }
 }
 
 .project {
-  background:#111;
-  padding:20px;
-  border-radius:10px;
-}
-
-.project h3 {
-  color:#f59e0b;
+  border-bottom:1px solid #333;
+  padding:10px 0;
 }
 
 /* CONTACT */
 .contact-container {
   display:flex;
-  justify-content:center;
   gap:50px;
   flex-wrap:wrap;
 }
@@ -87,15 +112,14 @@ form input, form textarea {
   margin-bottom:10px;
   padding:10px;
   border:none;
-  border-radius:5px;
+  border-radius:4px;
 }
 
 form button {
   background:#f59e0b;
-  padding:10px;
   border:none;
+  padding:10px;
 }
-
 </style>
 </head>
 
@@ -108,35 +132,71 @@ form button {
 
 <!-- HERO -->
 <section class="hero">
-  <div>
-    <h1>Raim International Contracting</h1>
-    <p>Delivering Excellence Across Saudi Arabia</p>
-    <a href="#contact" class="btn">Get a Quote</a>
+  <h1>Leading Contracting & MEP Solutions in Saudi Arabia</h1>
+  <p>
+  Raim International delivers civil, MEP, and maintenance services across major Saudi projects including NEOM, Aramco and Riyadh Metro.
+  </p>
+  <a href="#contact" class="btn">Request a Quote</a>
+</section>
+
+<!-- TRUST -->
+<section class="trust">
+  <div class="trust-box">
+    <h2>9+</h2>
+    <p>Years of Experience</p>
+  </div>
+
+  <div class="trust-box">
+    <h2>50+</h2>
+    <p>Projects Delivered</p>
+  </div>
+
+  <div class="trust-box">
+    <h2>KSA</h2>
+    <p>Nationwide Operations</p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section>
+  <h2>Our Services</h2>
+
+  <div class="services">
+    <div class="service">
+      <h3>Civil Construction</h3>
+      <p>Infrastructure and building projects across Saudi Arabia.</p>
+    </div>
+
+    <div class="service">
+      <h3>MEP Solutions</h3>
+      <p>Mechanical, electrical and plumbing systems.</p>
+    </div>
+
+    <div class="service">
+      <h3>Operation & Maintenance</h3>
+      <p>Long-term maintenance and facility management.</p>
+    </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
 <section>
-  <h2 style="text-align:center;">Our Major Projects</h2>
+  <h2>Selected Projects</h2>
 
   <div class="projects">
-
-    <div class="project"><h3>NEOM City Hospital</h3><p>2023</p></div>
-    <div class="project"><h3>Sindalah Island</h3><p>2022</p></div>
-    <div class="project"><h3>Riyadh Metro</h3><p>2018</p></div>
-    <div class="project"><h3>KAFD</h3><p>2020</p></div>
-    <div class="project"><h3>Aramco Stadium</h3><p>2025</p></div>
-    <div class="project"><h3>KAFD Fire Station</h3><p>2023</p></div>
-    <div class="project"><h3>Trojena</h3><p>2024</p></div>
-    <div class="project"><h3>Magna</h3><p>2023</p></div>
-    <div class="project"><h3>Oxagon</h3><p>2023</p></div>
-
+    <div class="project">NEOM City Hospital (2023)</div>
+    <div class="project">Sindalah Island (2022)</div>
+    <div class="project">Riyadh Metro (2018)</div>
+    <div class="project">KAFD (2020)</div>
+    <div class="project">Aramco Stadium (2025)</div>
+    <div class="project">Trojena (2024)</div>
+    <div class="project">Oxagon (2023)</div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <h2 style="text-align:center;">Contact Us</h2>
+  <h2>Contact</h2>
 
   <div class="contact-container">
 
