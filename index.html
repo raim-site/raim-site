@@ -3,15 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Raim International Contracting</title>
+
+<title>Raim International</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
+
+/* BASE */
 body {
   margin:0;
   font-family:'Poppins', sans-serif;
-  background:#0b0b0b;
+  background:#0b0f19;
   color:#fff;
 }
 
@@ -19,56 +22,72 @@ body {
 .navbar {
   position:sticky;
   top:0;
-  background:#0f172a;
-  padding:18px 40px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px 40px;
+  background:rgba(10,15,30,0.8);
+  backdrop-filter:blur(10px);
+  z-index:999;
 }
-.logo { height:70px; }
 
-/* HERO (clean, no box) */
+.logo { height:65px; }
+
+/* HERO */
 .hero {
-  padding:120px 40px;
-  background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+  height:100vh;
+  background:
+  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
   url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
 }
 
 .hero h1 {
-  font-size:44px;
+  font-size:48px;
   max-width:800px;
 }
 
 .hero p {
   margin:20px 0;
-  max-width:600px;
-  opacity:0.85;
+  opacity:0.8;
 }
 
 .btn {
-  background:#f59e0b;
-  padding:12px 26px;
+  background:linear-gradient(45deg,#f59e0b,#ffb400);
+  padding:14px 28px;
   border-radius:6px;
   color:#000;
-  text-decoration:none;
   font-weight:600;
+  text-decoration:none;
+  display:inline-block;
+  transition:0.3s;
+}
+
+.btn:hover {
+  transform:scale(1.05);
 }
 
 /* SECTION */
-section { padding:80px 40px; }
+section {
+  padding:80px 40px;
+}
 
-/* TRUST BLOCK */
+/* TRUST */
 .trust {
   display:flex;
+  justify-content:center;
   gap:50px;
   flex-wrap:wrap;
+  text-align:center;
 }
 
-.trust-box {
-  flex:1;
-  min-width:250px;
-}
-
-.trust-box h2 {
+.trust div h2 {
   color:#f59e0b;
-  font-size:40px;
+  font-size:38px;
 }
 
 /* SERVICES */
@@ -78,9 +97,17 @@ section { padding:80px 40px; }
   gap:25px;
 }
 
-.service {
-  border-top:2px solid #f59e0b;
-  padding-top:10px;
+.card {
+  background:rgba(255,255,255,0.03);
+  backdrop-filter:blur(10px);
+  padding:25px;
+  border-radius:15px;
+  transition:0.4s;
+}
+
+.card:hover {
+  transform:translateY(-8px);
+  box-shadow:0 0 20px rgba(245,158,11,0.4);
 }
 
 /* PROJECTS */
@@ -91,13 +118,16 @@ section { padding:80px 40px; }
 }
 
 .project {
-  border-bottom:1px solid #333;
-  padding:10px 0;
+  background:#111827;
+  padding:15px;
+  border-radius:10px;
+  border-left:3px solid #f59e0b;
 }
 
 /* CONTACT */
 .contact-container {
   display:flex;
+  justify-content:center;
   gap:50px;
   flex-wrap:wrap;
 }
@@ -112,14 +142,52 @@ form input, form textarea {
   margin-bottom:10px;
   padding:10px;
   border:none;
-  border-radius:4px;
+  border-radius:5px;
 }
 
 form button {
   background:#f59e0b;
-  border:none;
   padding:10px;
+  border:none;
 }
+
+/* WHATSAPP BUTTON */
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  padding:15px;
+  border-radius:50%;
+}
+
+/* MOBILE */
+@media (max-width:768px) {
+
+  .logo { height:50px; }
+
+  .hero {
+    height:auto;
+    padding:80px 20px;
+  }
+
+  .hero h1 {
+    font-size:28px;
+  }
+
+  section {
+    padding:50px 20px;
+  }
+
+  .contact-container {
+    flex-direction:column;
+    align-items:center;
+  }
+
+  form { width:100%; }
+
+}
+
 </style>
 </head>
 
@@ -132,57 +200,33 @@ form button {
 
 <!-- HERO -->
 <section class="hero">
-  <h1>Leading Contracting & MEP Solutions in Saudi Arabia</h1>
-  <p>
-  Raim International delivers civil, MEP, and maintenance services across major Saudi projects including NEOM, Aramco and Riyadh Metro.
-  </p>
-  <a href="#contact" class="btn">Request a Quote</a>
+  <div>
+    <h1>Leading Contracting & MEP Solutions in Saudi Arabia 🇸🇦</h1>
+    <p>Delivering civil, MEP and maintenance services across NEOM, Aramco, Riyadh Metro and more.</p>
+    <a href="#contact" class="btn">Request a Quote</a>
+  </div>
 </section>
 
 <!-- TRUST -->
 <section class="trust">
-  <div class="trust-box">
-    <h2>9+</h2>
-    <p>Years of Experience</p>
-  </div>
-
-  <div class="trust-box">
-    <h2>50+</h2>
-    <p>Projects Delivered</p>
-  </div>
-
-  <div class="trust-box">
-    <h2>KSA</h2>
-    <p>Nationwide Operations</p>
-  </div>
+  <div><h2>9+</h2><p>Years Experience</p></div>
+  <div><h2>50+</h2><p>Projects</p></div>
+  <div><h2>KSA</h2><p>Operations</p></div>
 </section>
 
 <!-- SERVICES -->
 <section>
-  <h2>Our Services</h2>
-
+  <h2 style="text-align:center;">Our Services</h2>
   <div class="services">
-    <div class="service">
-      <h3>Civil Construction</h3>
-      <p>Infrastructure and building projects across Saudi Arabia.</p>
-    </div>
-
-    <div class="service">
-      <h3>MEP Solutions</h3>
-      <p>Mechanical, electrical and plumbing systems.</p>
-    </div>
-
-    <div class="service">
-      <h3>Operation & Maintenance</h3>
-      <p>Long-term maintenance and facility management.</p>
-    </div>
+    <div class="card"><h3>Civil Construction</h3><p>Infrastructure & building works</p></div>
+    <div class="card"><h3>MEP Solutions</h3><p>Mechanical, electrical & plumbing</p></div>
+    <div class="card"><h3>Maintenance</h3><p>Operation & maintenance services</p></div>
   </div>
 </section>
 
 <!-- PROJECTS -->
 <section>
-  <h2>Selected Projects</h2>
-
+  <h2 style="text-align:center;">Major Projects</h2>
   <div class="projects">
     <div class="project">NEOM City Hospital (2023)</div>
     <div class="project">Sindalah Island (2022)</div>
@@ -196,7 +240,7 @@ form button {
 
 <!-- CONTACT -->
 <section id="contact">
-  <h2>Contact</h2>
+  <h2 style="text-align:center;">Contact Us</h2>
 
   <div class="contact-container">
 
@@ -214,9 +258,14 @@ form button {
 
   </div>
 </section>
-<a href="https://wa.me/966539141762?text=Hello%20Raim%20International,%20I%20need%20a%20quote" 
-style="position:fixed; bottom:20px; right:20px; background:#25D366; padding:15px; border-radius:50%;">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="25">
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/966539141762" class="whatsapp">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="20">
 </a>
-</body>
+
+</body><div class="sticky-bar">
+  <a href="tel:+966539141762">📞 Call</a>
+  <a href="https://wa.me/966539141762">💬 WhatsApp</a>
+</div>
 </html>
