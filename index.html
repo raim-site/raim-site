@@ -22,23 +22,20 @@ body {
 .navbar {
   position: sticky;
   top: 0;
-  background: rgba(15, 23, 42, 0.9);
+  background: rgba(15, 23, 42, 0.8);
   backdrop-filter: blur(10px);
   display: flex;
-  align-items: center;
   padding: 15px 40px;
   z-index: 999;
 }
 
-.logo {
-  height: 65px;
-}
+.logo { height: 65px; }
 
 /* HERO */
 .hero {
   height: 100vh;
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
-              url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover no-repeat;
+  url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,117 +47,108 @@ body {
 }
 
 @keyframes fadeUp {
-  from {opacity: 0; transform: translateY(40px);}
-  to {opacity: 1; transform: translateY(0);}
+  from {opacity:0; transform:translateY(40px);}
+  to {opacity:1; transform:translateY(0);}
 }
 
-.hero h1 {
-  font-size: 50px;
-  font-weight: 700;
-}
+.hero h1 { font-size:50px; }
 
-.hero p {
-  margin: 15px 0 25px;
-  opacity: 0.8;
-}
-
+/* BUTTON */
 .btn {
-  background: #f59e0b;
-  padding: 14px 30px;
-  border-radius: 6px;
-  font-weight: 600;
-  color: #000;
-  text-decoration: none;
-  transition: 0.3s;
+  background:#f59e0b;
+  padding:14px 30px;
+  border-radius:6px;
+  font-weight:600;
+  color:#000;
+  text-decoration:none;
 }
 
-.btn:hover {
-  background: #ffb400;
+/* SECTIONS */
+section {
+  padding:80px 40px;
+}
+
+/* SCROLL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 1s;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* SERVICES */
-.services {
-  padding: 80px 40px;
-}
-
-.services h2 {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
 .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
 }
 
-/* GLASS CARD */
 .card {
   background: rgba(255,255,255,0.03);
-  backdrop-filter: blur(8px);
-  padding: 25px;
-  border-radius: 15px;
-  transition: 0.4s;
-  border: 1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  padding:25px;
+  border-radius:15px;
+  transition:0.4s;
 }
 
 .card:hover {
-  transform: translateY(-10px) scale(1.02);
-  border-color: #f59e0b;
-  box-shadow: 0 0 20px rgba(245,158,11,0.3);
+  transform:translateY(-10px);
+  box-shadow:0 0 20px rgba(245,158,11,0.3);
 }
 
-.card h3 {
-  margin-bottom: 10px;
+/* COUNTER */
+.counter {
+  display:flex;
+  justify-content:center;
+  gap:50px;
+  text-align:center;
 }
 
-.card p {
-  opacity: 0.8;
-  font-size: 14px;
+.counter h2 {
+  font-size:40px;
+  color:#f59e0b;
+}
+
+/* PROJECT GALLERY */
+.gallery {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.gallery img {
+  width:100%;
+  border-radius:10px;
 }
 
 /* CONTACT */
-.contact {
-  padding: 80px 40px;
-  text-align: center;
-}
-
 .contact-container {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  flex-wrap: wrap;
-  margin-top: 40px;
-}
-
-.contact-info {
-  text-align: left;
-}
-
-.contact-info p {
-  margin-bottom: 15px;
-  opacity: 0.8;
+  display:flex;
+  justify-content:center;
+  gap:50px;
+  flex-wrap:wrap;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
+  display:flex;
+  flex-direction:column;
+  width:300px;
 }
 
 form input, form textarea {
-  margin-bottom: 15px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
+  margin-bottom:10px;
+  padding:10px;
+  border:none;
+  border-radius:5px;
 }
 
 form button {
-  background: #f59e0b;
-  border: none;
-  padding: 12px;
-  font-weight: bold;
-  cursor: pointer;
+  background:#f59e0b;
+  padding:10px;
+  border:none;
 }
 
 </style>
@@ -183,57 +171,62 @@ form button {
 </section>
 
 <!-- SERVICES -->
-<section class="services">
-  <h2>Our Services</h2>
-
+<section class="reveal">
+  <h2 style="text-align:center;">Our Services</h2>
   <div class="cards">
+    <div class="card"><h3>Civil</h3><p>Construction services</p></div>
+    <div class="card"><h3>MEP</h3><p>Engineering solutions</p></div>
+    <div class="card"><h3>Maintenance</h3><p>Facility services</p></div>
+  </div>
+</section>
 
-    <div class="card">
-      <h3>🏗 Civil</h3>
-      <p>Complete civil construction services with high quality execution.</p>
-    </div>
+<!-- COUNTER -->
+<section class="counter reveal">
+  <div><h2>50+</h2><p>Projects</p></div>
+  <div><h2>100+</h2><p>Clients</p></div>
+  <div><h2>10+</h2><p>Years</p></div>
+</section>
 
-    <div class="card">
-      <h3>⚡ MEP</h3>
-      <p>Mechanical, Electrical & Plumbing solutions.</p>
-    </div>
-
-    <div class="card">
-      <h3>🛠 Maintenance</h3>
-      <p>Operation & maintenance services for long-term reliability.</p>
-    </div>
-
-    <div class="card">
-      <h3>📊 Project Management</h3>
-      <p>Planning, execution, and supervision of projects.</p>
-    </div>
-
+<!-- GALLERY -->
+<section class="reveal">
+  <h2 style="text-align:center;">Our Projects</h2>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
+    <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231">
+    <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118">
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="contact" id="contact">
-
-  <h2>Contact Us</h2>
-
+<section id="contact" class="reveal">
+  <h2 style="text-align:center;">Contact Us</h2>
   <div class="contact-container">
-
-    <div class="contact-info">
-      <p>📞 +966 53 914 1762</p>
-      <p>📧 info@raimgroup.com</p>
-      <p>Saudi Arabia</p>
+    <div>
+      <p>+966 53 914 1762</p>
+      <p>info@raimgroup.com</p>
     </div>
 
     <form action="https://formspree.io/f/mjgjjlnw" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="Email">
+      <textarea placeholder="Message"></textarea>
+      <button>Send</button>
     </form>
-
   </div>
-
 </section>
+
+<script>
+window.addEventListener('scroll', function() {
+  let reveals = document.querySelectorAll('.reveal');
+  reveals.forEach(el => {
+    let windowHeight = window.innerHeight;
+    let elementTop = el.getBoundingClientRect().top;
+    if(elementTop < windowHeight - 100){
+      el.classList.add('active');
+    }
+  });
+});
+</script>
 
 </body>
 </html>
