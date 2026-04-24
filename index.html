@@ -1,20 +1,101 @@
 <!DOCTYPE html>
-
 <html>
 <head>
-  <title>Raim International</title>
-  <meta charset="UTF-8">
+<title>Raim International</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin:0;
+  font-family: Arial;
+  background:black;
+  color:white;
+}
+
+header {
+  display:flex;
+  justify-content:space-between;
+  padding:20px;
+  background:#111;
+}
+
+header h2 {
+  color:orange;
+}
+
+.hero {
+  text-align:center;
+  padding:100px 20px;
+}
+
+.btn {
+  background:orange;
+  padding:10px 20px;
+  color:black;
+  text-decoration:none;
+}
+
+.services {
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  padding:50px 20px;
+}
+
+.card {
+  background:#1a1a1a;
+  padding:20px;
+  width:250px;
+  border-radius:10px;
+}
+
+footer {
+  text-align:center;
+  padding:20px;
+  background:#111;
+}
+</style>
 </head>
 
-<body style="font-family: Arial; text-align: center; margin-top: 100px; background:black; color:white;">
+<body>
 
-<h1>Raim International 🌍</h1>
+<header>
+<h2>RAIM INTERNATIONAL</h2>
+<a href="https://wa.me/966539141762" class="btn">WhatsApp</a>
+</header>
+
+<section class="hero">
+<h1>Building the Future in Saudi Arabia 🇸🇦</h1>
 <p>Manpower • Construction • Real Estate</p>
+<br>
+<a href="https://wa.me/966539141762" class="btn">Get a Quote</a>
+</section>
 
+<section class="services">
+
+<div class="card">
+<h3>👷 Manpower</h3>
+<p>Skilled & unskilled workforce supply</p>
+</div>
+
+<div class="card">
+<h3>🏗 Construction</h3>
+<p>Complete building solutions</p>
+</div>
+
+<div class="card">
+<h3>🏢 Real Estate</h3>
+<p>Buy, sell & invest properties</p>
+</div>
+
+</section>
+
+<footer>
 <p>📞 +966 53 914 1762</p>
 <p>📧 info@raimgroup.com</p>
-
-<a href="https://wa.me/966539141762">Contact on WhatsApp</a>
+</footer>
 
 </body>
 </html>
