@@ -15,40 +15,27 @@ body {
   font-family: 'Poppins', sans-serif;
   background: #0b0b0b;
   color: #fff;
-  scroll-behavior: smooth;
 }
 
 /* NAVBAR */
 .navbar {
   position: sticky;
   top: 0;
-  background: rgba(15, 23, 42, 0.8);
-  backdrop-filter: blur(10px);
-  display: flex;
+  background: rgba(15, 23, 42, 0.9);
   padding: 15px 40px;
-  z-index: 999;
 }
 
 .logo { height: 65px; }
 
 /* HERO */
 .hero {
-  height: 100vh;
+  height: 90vh;
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
   url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.hero-content {
-  animation: fadeUp 1.5s ease;
-}
-
-@keyframes fadeUp {
-  from {opacity:0; transform:translateY(40px);}
-  to {opacity:1; transform:translateY(0);}
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
 }
 
 .hero h1 { font-size:50px; }
@@ -58,70 +45,28 @@ body {
   background:#f59e0b;
   padding:14px 30px;
   border-radius:6px;
-  font-weight:600;
   color:#000;
   text-decoration:none;
 }
 
-/* SECTIONS */
-section {
-  padding:80px 40px;
-}
+/* SECTION */
+section { padding:80px 40px; }
 
-/* SCROLL ANIMATION */
-.reveal {
-  opacity: 0;
-  transform: translateY(60px);
-  transition: 1s;
-}
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* SERVICES */
-.cards {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-}
-
-.card {
-  background: rgba(255,255,255,0.03);
-  backdrop-filter: blur(10px);
-  padding:25px;
-  border-radius:15px;
-  transition:0.4s;
-}
-
-.card:hover {
-  transform:translateY(-10px);
-  box-shadow:0 0 20px rgba(245,158,11,0.3);
-}
-
-/* COUNTER */
-.counter {
-  display:flex;
-  justify-content:center;
-  gap:50px;
-  text-align:center;
-}
-
-.counter h2 {
-  font-size:40px;
-  color:#f59e0b;
-}
-
-/* PROJECT GALLERY */
-.gallery {
+/* PROJECT LIST */
+.projects {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:20px;
 }
 
-.gallery img {
-  width:100%;
+.project {
+  background:#111;
+  padding:20px;
   border-radius:10px;
+}
+
+.project h3 {
+  color:#f59e0b;
 }
 
 /* CONTACT */
@@ -163,47 +108,41 @@ form button {
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-content">
-    <h1>Building the Future in Saudi Arabia 🇸🇦</h1>
-    <p>Excellence in Civil, MEP & Maintenance</p>
+  <div>
+    <h1>Raim International Contracting</h1>
+    <p>Delivering Excellence Across Saudi Arabia</p>
     <a href="#contact" class="btn">Get a Quote</a>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class="reveal">
-  <h2 style="text-align:center;">Our Services</h2>
-  <div class="cards">
-    <div class="card"><h3>Civil</h3><p>Construction services</p></div>
-    <div class="card"><h3>MEP</h3><p>Engineering solutions</p></div>
-    <div class="card"><h3>Maintenance</h3><p>Facility services</p></div>
-  </div>
-</section>
+<!-- PROJECTS -->
+<section>
+  <h2 style="text-align:center;">Our Major Projects</h2>
 
-<!-- COUNTER -->
-<section class="counter reveal">
-  <div><h2>50+</h2><p>Projects</p></div>
-  <div><h2>100+</h2><p>Clients</p></div>
-  <div><h2>10+</h2><p>Years</p></div>
-</section>
+  <div class="projects">
 
-<!-- GALLERY -->
-<section class="reveal">
-  <h2 style="text-align:center;">Our Projects</h2>
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
-    <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231">
-    <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118">
+    <div class="project"><h3>NEOM City Hospital</h3><p>2023</p></div>
+    <div class="project"><h3>Sindalah Island</h3><p>2022</p></div>
+    <div class="project"><h3>Riyadh Metro</h3><p>2018</p></div>
+    <div class="project"><h3>KAFD</h3><p>2020</p></div>
+    <div class="project"><h3>Aramco Stadium</h3><p>2025</p></div>
+    <div class="project"><h3>KAFD Fire Station</h3><p>2023</p></div>
+    <div class="project"><h3>Trojena</h3><p>2024</p></div>
+    <div class="project"><h3>Magna</h3><p>2023</p></div>
+    <div class="project"><h3>Oxagon</h3><p>2023</p></div>
+
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="reveal">
+<section id="contact">
   <h2 style="text-align:center;">Contact Us</h2>
+
   <div class="contact-container">
+
     <div>
-      <p>+966 53 914 1762</p>
-      <p>info@raimgroup.com</p>
+      <p>📞 +966 53 914 1762</p>
+      <p>📧 info@raimgroup.com</p>
     </div>
 
     <form action="https://formspree.io/f/mjgjjlnw" method="POST">
@@ -212,21 +151,9 @@ form button {
       <textarea placeholder="Message"></textarea>
       <button>Send</button>
     </form>
+
   </div>
 </section>
-
-<script>
-window.addEventListener('scroll', function() {
-  let reveals = document.querySelectorAll('.reveal');
-  reveals.forEach(el => {
-    let windowHeight = window.innerHeight;
-    let elementTop = el.getBoundingClientRect().top;
-    if(elementTop < windowHeight - 100){
-      el.classList.add('active');
-    }
-  });
-});
-</script>
 
 </body>
 </html>
