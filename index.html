@@ -19,7 +19,7 @@
 body {
   margin:0;
   font-family:'Poppins', sans-serif;
-  background:#0b0f19;
+  background:#0f2e1d;
   color:white;
 }
 
@@ -28,10 +28,15 @@ body {
   position:fixed;
   width:100%;
   top:0;
-  padding:15px;
+  display:flex;
+  align-items:center;
+  padding:15px 25px;
+  background:rgba(0,0,0,0.6);
 }
 
-.logo { height:60px; }
+.logo {
+  height:50px;
+}
 
 /* HERO */
 .hero {
@@ -40,29 +45,49 @@ body {
   align-items:center;
   justify-content:center;
   text-align:center;
-  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)),
+  background:
+  linear-gradient(rgba(0,40,20,0.7), rgba(0,20,10,0.9)),
   url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover;
 }
 
 .hero h1 {
   font-family:'Azonix';
+  font-size:48px;
+  letter-spacing:3px;
+  text-transform:uppercase;
 }
 
 /* SERVICES */
 .services {
+  padding:60px 20px;
+  text-align:center;
+}
+
+.services-grid {
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
 }
 
 /* PORTFOLIO */
 .portfolio {
   padding:70px 20px;
+  background:#0b1f15;
   text-align:center;
 }
 
 .filters button {
   margin:5px;
-  padding:8px;
+  padding:8px 15px;
+  border:none;
+  background:#1f3d2b;
+  color:white;
+  cursor:pointer;
+}
+
+.filters button:hover {
+  background:#22c55e;
+  color:black;
 }
 
 .portfolio-grid {
@@ -72,8 +97,10 @@ body {
 }
 
 .portfolio-card {
-  background:#111827;
+  background:rgba(255,255,255,0.05);
   border-radius:10px;
+  overflow:hidden;
+  transition:0.3s;
 }
 
 .portfolio-card img {
@@ -82,9 +109,14 @@ body {
   object-fit:cover;
 }
 
+.portfolio-card:hover {
+  transform:scale(1.05);
+}
+
 /* MOBILE */
 @media(max-width:768px){
-  .hero {height:auto;}
+  .hero {height:auto; padding:80px 20px;}
+  .hero h1 {font-size:26px;}
 }
 
 </style>
@@ -92,21 +124,25 @@ body {
 
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
-  <img src="logo.png" class="logo">
+  <!-- এখানে icon logo বসবে -->
+  <img src="logo-icon.png" class="logo">
 </div>
 
+<!-- HERO -->
 <section class="hero">
   <div>
     <h1>Leading Contracting & MEP Solutions</h1>
   </div>
 </section>
 
-<section>
+<!-- SERVICES -->
+<section class="services">
   <h2>Services</h2>
-  <div class="services">
-    <div>Civil</div>
-    <div>MEP</div>
+  <div class="services-grid">
+    <div>Civil Construction</div>
+    <div>MEP Solutions</div>
     <div>Maintenance</div>
   </div>
 </section>
@@ -125,12 +161,12 @@ body {
 
     <div class="portfolio-card civil">
       <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
-      <h3>NEOM</h3>
+      <h3>NEOM Project</h3>
     </div>
 
     <div class="portfolio-card mep">
       <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab">
-      <h3>Metro</h3>
+      <h3>Riyadh Metro</h3>
     </div>
 
   </div>
