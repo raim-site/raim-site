@@ -3,132 +3,119 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Raim International</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 
+/* CUSTOM FONT */
+@font-face {
+  font-family: 'Azonix';
+  src: url('Azonix.otf');
+}
+
 /* BASE */
 body {
   margin:0;
   font-family:'Poppins', sans-serif;
   background:#0b0f19;
-  color:#fff;
+  color:white;
+  scroll-behavior:smooth;
 }
 
 /* NAVBAR */
 .navbar {
-  position:sticky;
+  position:fixed;
+  width:100%;
   top:0;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:15px 40px;
-  background:rgba(10,15,30,0.8);
+  padding:12px 30px;
+  background:rgba(10,15,30,0.85);
   backdrop-filter:blur(10px);
   z-index:999;
 }
 
-.logo { height:65px; }
+.logo {
+  height:60px;
+}
 
 /* HERO */
 .hero {
   height:100vh;
-  background:
-  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
-  url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
+  background:
+  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+  url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover;
   padding:20px;
 }
 
 .hero h1 {
-  font-size:48px;
-  max-width:800px;
+  font-family:'Azonix';
+  font-size:46px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  animation:fadeUp 1s ease;
 }
 
 .hero p {
   margin:20px 0;
   opacity:0.8;
+  animation:fadeUp 1.5s ease;
 }
 
 .btn {
-  background:linear-gradient(45deg,#f59e0b,#ffb400);
+  background:#f59e0b;
   padding:14px 28px;
   border-radius:6px;
   color:#000;
-  font-weight:600;
   text-decoration:none;
-  display:inline-block;
-  transition:0.3s;
+  font-weight:600;
+  animation:fadeUp 2s ease;
 }
 
-.btn:hover {
-  transform:scale(1.05);
-}
-
-/* SECTION */
+/* SECTIONS */
 section {
   padding:80px 40px;
 }
 
-/* TRUST */
-.trust {
-  display:flex;
-  justify-content:center;
-  gap:50px;
-  flex-wrap:wrap;
+h2 {
+  font-family:'Azonix';
   text-align:center;
+  margin-bottom:30px;
 }
 
-.trust div h2 {
-  color:#f59e0b;
-  font-size:38px;
-}
-
-/* SERVICES */
-.services {
+/* CARDS */
+.services, .projects {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:25px;
 }
 
-.card {
+.card, .project {
   background:rgba(255,255,255,0.03);
-  backdrop-filter:blur(10px);
   padding:25px;
-  border-radius:15px;
+  border-radius:12px;
   transition:0.4s;
+  opacity:0;
+  transform:translateY(30px);
 }
 
-.card:hover {
-  transform:translateY(-8px);
-  box-shadow:0 0 20px rgba(245,158,11,0.4);
-}
-
-/* PROJECTS */
-.projects {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-
-.project {
-  background:#111827;
-  padding:15px;
-  border-radius:10px;
-  border-left:3px solid #f59e0b;
+.card:hover, .project:hover {
+  transform:translateY(-5px);
+  box-shadow:0 0 15px rgba(245,158,11,0.4);
 }
 
 /* CONTACT */
 .contact-container {
   display:flex;
   justify-content:center;
-  gap:50px;
+  gap:40px;
   flex-wrap:wrap;
 }
 
@@ -145,47 +132,52 @@ form input, form textarea {
   border-radius:5px;
 }
 
-form button {
-  background:#f59e0b;
-  padding:10px;
-  border:none;
+/* STICKY BAR */
+.sticky-bar {
+  position:fixed;
+  bottom:0;
+  width:100%;
+  display:flex;
+  background:#0f172a;
 }
 
-/* WHATSAPP BUTTON */
-.whatsapp {
-  position:fixed;
-  bottom:20px;
-  right:20px;
+.sticky-bar a {
+  flex:1;
+  text-align:center;
+  padding:12px;
+  color:white;
+  text-decoration:none;
+}
+
+.sticky-bar a:last-child {
   background:#25D366;
-  padding:15px;
-  border-radius:50%;
+}
+
+/* POPUP */
+.exit-popup {
+  position:fixed;
+  top:30%;
+  left:50%;
+  transform:translateX(-50%);
+  background:#111;
+  padding:20px;
+  border-radius:10px;
+  display:none;
+  text-align:center;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {opacity:0; transform:translateY(30px);}
+  to {opacity:1; transform:translateY(0);}
 }
 
 /* MOBILE */
-@media (max-width:768px) {
-
-  .logo { height:50px; }
-
-  .hero {
-    height:auto;
-    padding:80px 20px;
-  }
-
-  .hero h1 {
-    font-size:28px;
-  }
-
-  section {
-    padding:50px 20px;
-  }
-
-  .contact-container {
-    flex-direction:column;
-    align-items:center;
-  }
-
-  form { width:100%; }
-
+@media(max-width:768px){
+  .hero {height:auto; padding:80px 20px;}
+  .hero h1 {font-size:26px;}
+  section {padding:50px 20px;}
+  .logo {height:45px;}
 }
 
 </style>
@@ -201,49 +193,36 @@ form button {
 <!-- HERO -->
 <section class="hero">
   <div>
-    <h1>Leading Contracting & MEP Solutions in Saudi Arabia 🇸🇦</h1>
-    <p>Delivering civil, MEP and maintenance services across NEOM, Aramco, Riyadh Metro and more.</p>
+    <h1>Leading Contracting & MEP Solutions</h1>
+    <p>NEOM • ARAMCO • RIYADH METRO</p>
     <a href="#contact" class="btn">Request a Quote</a>
   </div>
 </section>
 
-<!-- TRUST -->
-<section class="trust">
-  <div><h2>9+</h2><p>Years Experience</p></div>
-  <div><h2>50+</h2><p>Projects</p></div>
-  <div><h2>KSA</h2><p>Operations</p></div>
-</section>
-
 <!-- SERVICES -->
 <section>
-  <h2 style="text-align:center;">Our Services</h2>
+  <h2>Services</h2>
   <div class="services">
-    <div class="card"><h3>Civil Construction</h3><p>Infrastructure & building works</p></div>
-    <div class="card"><h3>MEP Solutions</h3><p>Mechanical, electrical & plumbing</p></div>
-    <div class="card"><h3>Maintenance</h3><p>Operation & maintenance services</p></div>
+    <div class="card">Civil Construction</div>
+    <div class="card">MEP Solutions</div>
+    <div class="card">Maintenance</div>
   </div>
 </section>
 
 <!-- PROJECTS -->
 <section>
-  <h2 style="text-align:center;">Major Projects</h2>
+  <h2>Projects</h2>
   <div class="projects">
-    <div class="project">NEOM City Hospital (2023)</div>
-    <div class="project">Sindalah Island (2022)</div>
-    <div class="project">Riyadh Metro (2018)</div>
-    <div class="project">KAFD (2020)</div>
-    <div class="project">Aramco Stadium (2025)</div>
-    <div class="project">Trojena (2024)</div>
-    <div class="project">Oxagon (2023)</div>
+    <div class="project">NEOM City Hospital</div>
+    <div class="project">Riyadh Metro</div>
+    <div class="project">Aramco Stadium</div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <h2 style="text-align:center;">Contact Us</h2>
-
+  <h2>Contact</h2>
   <div class="contact-container">
-
     <div>
       <p>📞 +966 53 914 1762</p>
       <p>📧 info@raimgroup.com</p>
@@ -255,18 +234,44 @@ form button {
       <textarea placeholder="Message"></textarea>
       <button>Send</button>
     </form>
-
   </div>
 </section>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/966539141762" class="whatsapp">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="20">
-</a>
-
-</body><div class="sticky-bar">
+<!-- STICKY BAR -->
+<div class="sticky-bar">
   <a href="tel:+966539141762">📞 Call</a>
-  <a href="https://wa.me/966539141762"> WhatsApp</a>
-
+  <a href="https://wa.me/966539141762">💬 WhatsApp</a>
 </div>
+
+<!-- POPUP -->
+<div class="exit-popup" id="exitPopup">
+  <p>Need help with your project?</p>
+  <a href="https://wa.me/966539141762">Chat Now</a>
+</div>
+
+<script>
+
+// EXIT POPUP
+document.addEventListener("mouseleave", function(e) {
+  if (e.clientY < 10) {
+    document.getElementById("exitPopup").style.display = "block";
+  }
+});
+
+// SCROLL ANIMATION
+const elements = document.querySelectorAll('.card, .project');
+
+window.addEventListener('scroll', () => {
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 50){
+      el.style.opacity = 1;
+      el.style.transform = 'translateY(0)';
+    }
+  });
+});
+
+</script>
+
+</body>
 </html>
