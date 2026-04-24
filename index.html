@@ -28,12 +28,12 @@ body {
   position:fixed;
   width:100%;
   top:0;
-  padding:15px 25px;
+  padding:20px 30px;
   background:rgba(0,0,0,0.6);
 }
 
 .logo {
-  height:50px;
+  height:80px; /* 🔥 BIGGER LOGO */
 }
 
 /* HERO */
@@ -52,13 +52,18 @@ body {
 
 .hero h1 {
   font-family:'Azonix';
-  font-size:50px;
+  font-size:52px;
+  color:#22c55e; /* 🔥 GREEN PREMIUM TEXT */
 }
 
 /* SERVICES */
 .services {
   padding:80px 20px;
   text-align:center;
+}
+
+.services h2 {
+  color:#22c55e;
 }
 
 .services-grid {
@@ -69,9 +74,10 @@ body {
 
 .service-card {
   background:rgba(255,255,255,0.05);
-  padding:20px;
+  padding:25px;
   border-radius:12px;
-  border:1px solid rgba(34,197,94,0.2);
+  border:1px solid rgba(34,197,94,0.3);
+  font-weight:600;
 }
 
 /* PORTFOLIO */
@@ -80,37 +86,43 @@ body {
   text-align:center;
 }
 
-.filters button {
-  margin:5px;
-  padding:8px 15px;
-  background:#1f3d2b;
-  color:white;
-  border:none;
-  cursor:pointer;
+.portfolio h2 {
+  color:#22c55e;
 }
 
 .portfolio-grid {
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
 }
 
 .portfolio-card {
-  border-radius:12px;
+  border-radius:15px;
   overflow:hidden;
-  border:1px solid rgba(34,197,94,0.2);
+  border:1px solid rgba(34,197,94,0.3);
+  background:rgba(255,255,255,0.03);
+  transition:0.3s;
 }
 
 .portfolio-card img {
   width:100%;
-  height:200px;
+  height:220px;
   object-fit:cover;
 }
 
-/* MOBILE */
+.portfolio-card h3 {
+  padding:15px;
+  font-size:18px;
+  color:#22c55e;
+}
+
+.portfolio-card:hover {
+  transform:scale(1.05);
+}
+
 @media(max-width:768px){
   .hero {height:auto; padding:80px 20px;}
-  .hero h1 {font-size:26px;}
+  .hero h1 {font-size:28px;}
 }
 
 </style>
@@ -120,7 +132,6 @@ body {
 
 <!-- NAVBAR -->
 <div class="navbar">
-  <!-- এখানে logo -->
   <img src="logo.png" class="logo">
 </div>
 
@@ -149,12 +160,32 @@ body {
 
     <div class="portfolio-card">
       <img src="project1.jpg">
-      <h3>NEOM Project</h3>
+      <h3>NEOM City Hospital - 2023</h3>
     </div>
 
     <div class="portfolio-card">
       <img src="project2.jpg">
-      <h3>Riyadh Metro</h3>
+      <h3>Sindalah Island - 2022</h3>
+    </div>
+
+    <div class="portfolio-card">
+      <img src="project3.jpg">
+      <h3>Riyadh Metro - 2018</h3>
+    </div>
+
+    <div class="portfolio-card">
+      <img src="project4.jpg">
+      <h3>KAFD - 2020</h3>
+    </div>
+
+    <div class="portfolio-card">
+      <img src="project5.jpg">
+      <h3>Aramco Stadium - 2025</h3>
+    </div>
+
+    <div class="portfolio-card">
+      <img src="project6.jpg">
+      <h3>Trojena - 2024</h3>
     </div>
 
   </div>
