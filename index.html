@@ -13,26 +13,20 @@ body {
   color:white;
 }
 
+/* HEADER */
 header {
   display:flex;
-  justify-content:space-between;
+  justify-content:center;
   align-items:center;
-  padding:20px 40px;
+  padding:20px;
   background:#111;
 }
 
 .logo img {
-  height:40px;
+  height:50px;
 }
 
-.btn {
-  background:#f5a623;
-  color:black;
-  padding:10px 20px;
-  text-decoration:none;
-  border-radius:5px;
-}
-
+/* HERO */
 .hero {
   text-align:center;
   padding:120px 20px;
@@ -45,8 +39,20 @@ header {
 
 .hero p {
   color:#ccc;
+  margin-top:10px;
 }
 
+.btn {
+  background:#f5a623;
+  color:black;
+  padding:12px 25px;
+  text-decoration:none;
+  border-radius:5px;
+  display:inline-block;
+  margin-top:20px;
+}
+
+/* SERVICES */
 .services {
   display:flex;
   justify-content:center;
@@ -63,11 +69,28 @@ header {
   text-align:center;
 }
 
+/* CONTACT */
 .contact {
   text-align:center;
   padding:60px 20px;
 }
 
+input, textarea {
+  padding:10px;
+  width:220px;
+  border:none;
+  border-radius:5px;
+}
+
+button {
+  background:#f5a623;
+  border:none;
+  padding:10px 20px;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+/* FOOTER */
 footer {
   text-align:center;
   padding:20px;
@@ -82,14 +105,12 @@ footer {
   <div class="logo">
     <img src="logo.png">
   </div>
-  <a class="btn" href="https://wa.me/966539141762">WhatsApp</a>
 </header>
 
 <section class="hero">
   <h1>Building the Future in Saudi Arabia 🇸🇦</h1>
   <p>Building Excellence. Delivering Trust.</p>
-  <br>
-  <a class="btn" href="https://wa.me/966539141762">Get a Quote</a>
+  <a class="btn" href="#contact">Get a Quote</a>
 </section>
 
 <section class="services">
@@ -109,23 +130,18 @@ footer {
   </div>
 </section>
 
-<section class="contact">
+<section class="contact" id="contact">
   <h2>Contact Us</h2>
   <p>📞 +966 53 914 1762</p>
   <p>📧 info@raimgroup.com</p>
 
   <form action="https://formspree.io/f/mjgjjlnw" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required style="padding:10px; width:200px;"><br><br>
-    <input type="email" name="email" placeholder="Your Email" required style="padding:10px; width:200px;"><br><br>
-    <textarea name="message" placeholder="Your Message" required style="padding:10px; width:200px;"></textarea><br><br>
-    <button class="btn">Send Message</button>
+    <input type="text" name="name" placeholder="Your Name" required><br><br>
+    <input type="email" name="email" placeholder="Your Email" required><br><br>
+    <textarea name="message" placeholder="Your Message" required></textarea><br><br>
+    <button type="submit">Send Message</button>
   </form>
 </section>
-
-<a href="https://wa.me/966539141762" 
-style="position:fixed; bottom:20px; right:20px; background:#25D366; padding:15px; border-radius:50%; color:white;">
-💬
-</a>
 
 <footer>
   © 2026 Raim International
