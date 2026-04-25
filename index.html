@@ -1,69 +1,747 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>RAIM Contracting</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-
-<!-- NAVBAR -->
-<header class="navbar">
-  <h2 class="logo">RAIM</h2>
-  <a href="#" class="btn">Get a Quote</a>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-slider">
-    <img src="images/hero1.jpg" class="active">
-    <img src="images/hero2.jpg">
-    <img src="images/hero3.jpg">
-  </div>
-
-  <div class="overlay"></div>
-
-  <div class="hero-content">
-    <h1>Reliable Construction & Manpower Solutions</h1>
-    <p>Delivering excellence across Saudi Arabia</p>
-    <a href="#" class="btn">Get Started</a>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="services">
-  <h2>Our Services</h2>
-
-  <div class="cards">
-    <div class="card">
-      <h3>Construction</h3>
-      <p>High-quality building solutions</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RAIM International Contracting Company</title>
+    <meta
+      name="description"
+      content="RAIM International Contracting Company delivers main contracting, subcontracting, civil, mechanical, electrical, and manpower support services for major projects."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="announcement-bar">
+      <div class="container announcement-content">
+        <span>RAIM International delivers main contracting, subcontracting, and manpower support for major projects.</span>
+        <a href="#contact">Request a Proposal</a>
+      </div>
     </div>
 
-    <div class="card">
-      <h3>Manpower</h3>
-      <p>Skilled workforce supply</p>
-    </div>
+    <header class="site-header">
+      <div class="container topbar">
+        <a class="brand" href="#home">
+          <img src="./logo.png" alt="RAIM International logo" />
+          <div>
+            <span>RAIM INTERNATIONAL</span>
+            <small>CONTRACTING COMPANY</small>
+          </div>
+        </a>
 
-    <div class="card">
-      <h3>Industrial</h3>
-      <p>Mechanical & civil works</p>
-    </div>
-  </div>
-</section>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu" data-nav-toggle>
+          <span></span>
+          <span></span>
+        </button>
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 RAIM Contracting Company</p>
-</footer>
+        <nav class="nav" data-nav>
+          <div class="nav-item has-mega">
+            <a href="#services">Services</a>
+            <div class="mega-menu">
+              <div>
+                <p>Core Services</p>
+                <a href="#services">Main Contracting</a>
+                <a href="#services">Subcontracting Works</a>
+                <a href="#services">Civil, Mechanical & Electrical</a>
+                <a href="#manpower">Manpower Support</a>
+              </div>
+              <div>
+                <p>Delivery Stages</p>
+                <a href="#services">Site Review</a>
+                <a href="#services">Proposal & Planning</a>
+                <a href="#services">Installation & Build</a>
+                <a href="#services">Testing & Handover</a>
+              </div>
+            </div>
+          </div>
+          <div class="nav-item has-mega">
+            <a href="#industries">Industries</a>
+            <div class="mega-menu">
+              <div>
+                <p>Sectors</p>
+                <a href="#industries">Commercial & Real Estate</a>
+                <a href="#industries">Hospitality & Leisure</a>
+                <a href="#industries">Industrial & Utilities</a>
+                <a href="#industries">Public & Institutional</a>
+              </div>
+              <div>
+                <p>Coverage</p>
+                <a href="#coverage">Riyadh Projects</a>
+                <a href="#coverage">Jeddah Support</a>
+                <a href="#coverage">Dammam Delivery</a>
+                <a href="#coverage">Regional Expansion</a>
+              </div>
+            </div>
+          </div>
+          <a href="#projects">Projects</a>
+          <a href="#about">Company</a>
+          <a href="#faq">FAQs</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-<script src="js/script.js"></script>
-</body>
+        <a class="nav-cta" href="#contact">Get Started</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-backdrop">
+          <canvas class="connection-canvas" id="connection-canvas" aria-hidden="true"></canvas>
+          <div class="hero-glow hero-glow-a"></div>
+          <div class="hero-glow hero-glow-b"></div>
+          <div class="hero-gridlines"></div>
+        </div>
+        <div class="container hero-layout">
+          <div class="hero-copy" data-reveal="up">
+            <p class="eyebrow">Live Project Support Across Major Sites</p>
+            <h1>Main contracting, subcontracting, and manpower support under one strong construction partner.</h1>
+            <p class="lead">
+              RAIM International Contracting Company supports major projects through civil, mechanical,
+              electrical, finishing, and manpower services. We work as a main contractor, subcontractor,
+              and project manpower support provider depending on the scope and client requirement.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button primary" href="#contact">Get Started</a>
+              <a class="button secondary" href="#services">Explore Services</a>
+            </div>
+
+            <div class="hero-stats">
+              <article>
+                <strong>120+</strong>
+                <span>Projects Delivered</span>
+              </article>
+              <article>
+                <strong>KSA</strong>
+                <span>Middle East Focus</span>
+              </article>
+              <article>
+                <strong>24/7</strong>
+                <span>Execution Support</span>
+              </article>
+            </div>
+          </div>
+
+          <div class="hero-panel glass-panel" data-reveal="left">
+            <div class="hero-badge">Featured Company Identity</div>
+            <div class="hero-logo-card">
+              <img src="./logo.png" alt="RAIM International full logo" />
+            </div>
+            <div class="hero-highlight-grid">
+              <article>
+                <span>Delivery Model</span>
+                <strong>Main Contracting</strong>
+              </article>
+              <article>
+                <span>Execution Role</span>
+                <strong>Subcontracting</strong>
+              </article>
+              <article>
+                <span>Support Type</span>
+                <strong>Manpower Supply</strong>
+              </article>
+              <article>
+                <span>Scope Coverage</span>
+                <strong>Civil • Mechanical • Electrical</strong>
+              </article>
+            </div>
+
+            <div class="live-ops-board">
+              <div class="live-ops-top">
+                <span>Live Operations</span>
+                <span class="pulse-dot"></span>
+              </div>
+              <div class="ops-bars">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="ops-track">
+                <div class="ops-line">
+                  <span>Main Contracting</span>
+                  <span>Subcontracting</span>
+                  <span>Manpower Support</span>
+                  <span>Site Execution</span>
+                  <span>Shutdown Support</span>
+                  <span>Main Contracting</span>
+                  <span>Subcontracting</span>
+                  <span>Manpower Support</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="visual-strip section-dark">
+        <div class="container visual-strip-layout">
+          <article class="visual-card tall-card" data-reveal="up">
+            <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1200&q=80" alt="Modern tower exterior" />
+            <div class="visual-card-copy">
+              <span>Signature Build Vision</span>
+              <h3>Modern construction identity with premium delivery standards.</h3>
+            </div>
+          </article>
+          <article class="visual-card" data-reveal="up">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80" alt="Construction team on site" />
+            <div class="visual-card-copy">
+              <span>Site Coordination</span>
+              <h3>Execution that feels structured, fast, and high-confidence.</h3>
+            </div>
+          </article>
+          <article class="visual-card" data-reveal="up">
+            <img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80" alt="Luxury interior" />
+            <div class="visual-card-copy">
+              <span>Interior Finish</span>
+              <h3>From technical delivery to polished client presentation.</h3>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-light" id="about">
+        <div class="container split-layout">
+          <div class="section-copy">
+            <p class="eyebrow dark">Who We Are</p>
+            <h2>RAIM International is built for clients who need order, speed, and construction confidence.</h2>
+            <p>
+              We combine contracting discipline with practical engineering coordination to deliver
+              spaces and systems that perform well on site and present well to clients, operators,
+              and stakeholders.
+            </p>
+            <p>
+              From early planning and site review to installation, inspection, and final handover,
+              our team keeps delivery structured and dependable.
+            </p>
+          </div>
+
+          <div class="feature-card dark-card">
+            <h3>Our mission</h3>
+            <p>
+              To make complex contracting, subcontracting, and manpower mobilization easier, cleaner, and more reliable for
+              modern organizations across commercial, retail, hospitality, and industrial environments.
+            </p>
+            <ul>
+              <li>Main Contracting</li>
+              <li>Subcontracting Services</li>
+              <li>Manpower Support Solutions</li>
+              <li>Civil, Mechanical & Electrical Works</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark" id="services">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">One Stop Solution</p>
+            <h2>End-to-end delivery for main contracting, subcontracting, and manpower support scopes.</h2>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-step">
+              <span>01</span>
+              <h3>Roadworks & Pavement</h3>
+              <p>Road construction, asphalt and concrete laying, sidewalks, and parking development for residential, commercial, municipal, airport, and highway projects.</p>
+            </article>
+            <article class="service-step">
+              <span>02</span>
+              <h3>Structural & Civil Works</h3>
+              <p>Compound walls, perimeter walls, brick and concrete structures, fencing systems, and reinforced concrete works tailored to site requirements.</p>
+            </article>
+            <article class="service-step">
+              <span>03</span>
+              <h3>Earthworks & Foundations</h3>
+              <p>Excavation, grading, soil preparation, footings, raft foundations, slabs, beams, and stormwater-focused site preparation.</p>
+            </article>
+            <article class="service-step">
+              <span>04</span>
+              <h3>Building & Finishing Works</h3>
+              <p>New construction, renovations, tile and stone flooring, staircases, wall finishes, plaster, glass, metal, and cladding works.</p>
+            </article>
+            <article class="service-step">
+              <span>05</span>
+              <h3>HVAC, Electrical & Plumbing</h3>
+              <p>HVAC plants, ducting, chilled water piping, panel boards, cables, plumbing, drainage, and integrated electromechanical execution.</p>
+            </article>
+            <article class="service-step">
+              <span>06</span>
+              <h3>Fire, Safety & Maintenance</h3>
+              <p>Fire protection systems, testing and commissioning, QA/QC, HSE compliance, and long-term maintenance support.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-light" id="core-scopes">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow dark">Core Work Categories</p>
+            <h2>Civil, mechanical, electrical, and specialist project support under one execution structure.</h2>
+          </div>
+
+          <div class="scope-grid">
+            <article class="scope-card">
+              <h3>Civil Works</h3>
+              <ul>
+                <li>Commercial and residential civil construction</li>
+                <li>Roadworks, pavement, sidewalks, and parking areas</li>
+                <li>Structural concrete, walls, fencing, and foundations</li>
+                <li>Landscaping, external works, and finishing packages</li>
+                <li>Wastewater, sewage, and stormwater systems</li>
+              </ul>
+            </article>
+            <article class="scope-card">
+              <h3>Mechanical Works</h3>
+              <ul>
+                <li>HVAC systems design, installation, and maintenance</li>
+                <li>Ducting, chilled water piping, copper tubing, and ventilation</li>
+                <li>Chillers, AHU, FCU, VRF, and centralized cooling systems</li>
+                <li>Piping networks, pumps, valves, and rotating/static equipment support</li>
+                <li>Fire fighting pipeline infrastructure and related systems</li>
+              </ul>
+            </article>
+            <article class="scope-card">
+              <h3>Electrical Works</h3>
+              <ul>
+                <li>Lighting, power distribution, and communication systems</li>
+                <li>HV/LV panel boards, switchgear, motors, and industrial fans</li>
+                <li>Earthing, lightning protection, transformers, and generators</li>
+                <li>Building management systems and complete electrical circuits</li>
+                <li>Control panels, cable trays, and testing/commissioning</li>
+              </ul>
+            </article>
+            <article class="scope-card">
+              <h3>Plumbing & Fire Protection</h3>
+              <ul>
+                <li>Potable water, sanitary fixtures, and booster systems</li>
+                <li>Drainage, wastewater, stormwater, and irrigation systems</li>
+                <li>Sprinklers, hydrants, hose reels, and alarm systems</li>
+                <li>Fire pumps, FM200, CO2, water mist, and clean agent systems</li>
+                <li>Testing, compliance, and operational safety support</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-light" id="industries">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow dark">Industries</p>
+            <h2>Specialized execution across multiple sectors.</h2>
+          </div>
+
+          <div class="industries-grid">
+            <article class="industry-card accent-a">
+              <h3>Commercial & Real Estate</h3>
+              <ul>
+                <li>Office & Corporate Campuses</li>
+                <li>Retail & Shopping Centers</li>
+                <li>Mixed-Use Facilities</li>
+              </ul>
+            </article>
+            <article class="industry-card accent-b">
+              <h3>Hospitality & Leisure</h3>
+              <ul>
+                <li>Hotel Interiors</li>
+                <li>Executive Lounges</li>
+                <li>Guest Facility Upgrades</li>
+              </ul>
+            </article>
+            <article class="industry-card accent-c">
+              <h3>Industrial & Utilities</h3>
+              <ul>
+                <li>Warehousing Infrastructure</li>
+                <li>Utility Coordination</li>
+                <li>Technical Upgrade Projects</li>
+              </ul>
+            </article>
+            <article class="industry-card accent-d">
+              <h3>Public & Institutional</h3>
+              <ul>
+                <li>Municipal Facilities</li>
+                <li>Transport Support Facilities</li>
+                <li>Service Buildings</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark" id="projects">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Project Highlights</p>
+            <h2>Execution styles built for different environments.</h2>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card featured image-card">
+              <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80" alt="Corporate office interior project" />
+              <div class="project-tag-row">
+                <span>Commercial</span>
+                <span>MEP</span>
+                <span>Fit-Out</span>
+              </div>
+              <h3>Corporate Office Delivery</h3>
+              <p>Boardroom fit-out, reception detailing, electrical coordination, and HVAC integration.</p>
+            </article>
+            <article class="project-card image-card">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80" alt="Modern commercial building project" />
+              <div class="project-tag-row">
+                <span>Retail</span>
+                <span>Execution</span>
+              </div>
+              <h3>Showroom Build Package</h3>
+              <p>Lighting, finishes, display integration, and brand-sensitive construction detailing.</p>
+            </article>
+            <article class="project-card image-card">
+              <img src="https://images.unsplash.com/photo-1581093458791-9d42e0f7aa16?auto=format&fit=crop&w=1200&q=80" alt="Mechanical engineering and maintenance project" />
+              <div class="project-tag-row">
+                <span>Maintenance</span>
+                <span>Support</span>
+              </div>
+              <h3>Facility Upgrade Program</h3>
+              <p>Ongoing technical interventions, service coordination, and phased enhancement works.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-light">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow dark">Why RAIM International</p>
+            <h2>Structured delivery with a presentation level clients can trust.</h2>
+          </div>
+
+          <div class="advantage-grid">
+            <article class="advantage-card">
+              <strong>01</strong>
+              <h3>One Team, Multiple Scopes</h3>
+              <p>Main contracting, subcontracting, site execution, and manpower support are coordinated under one delivery structure.</p>
+            </article>
+            <article class="advantage-card">
+              <strong>02</strong>
+              <h3>Premium Client Handling</h3>
+              <p>Clear communication, cleaner reports, milestone tracking, and polished client-facing execution.</p>
+            </article>
+            <article class="advantage-card">
+              <strong>03</strong>
+              <h3>Site-to-Handover Continuity</h3>
+              <p>We stay involved from planning and mobilization to snagging, close-out, and post-delivery support.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark" id="manpower">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Manpower Supply</p>
+            <h2>Skilled manpower categories for project execution, shutdown support, and long-term operations.</h2>
+          </div>
+
+          <div class="manpower-grid">
+            <article class="manpower-card">
+              <h3>Civil Workforce</h3>
+              <p>Steel fixer, carpenter, formwork carpenter, gypsum carpenter, scaffolder, mason, tile mason, painter, plumber, electrician, and general labor.</p>
+            </article>
+            <article class="manpower-card">
+              <h3>Mechanical Workforce</h3>
+              <p>Pipe fabricator, pipe fitter, mechanical fitter, millwright, riggers, TIG and multi welders, insulator, sand blaster, spray painter, and equipment technicians.</p>
+            </article>
+            <article class="manpower-card">
+              <h3>Electrical & Instrumentation</h3>
+              <p>Electrician, industrial electrician, instrument technician, control technician, cable puller, and panel technician.</p>
+            </article>
+            <article class="manpower-card">
+              <h3>General Workforce</h3>
+              <p>Drivers, mechanic, crane operator, forklift operator, bobcat operator, heavy equipment operator, skilled worker, helpers, and mechanical helpers.</p>
+            </article>
+            <article class="manpower-card">
+              <h3>Oil & Gas / Plant Operations</h3>
+              <p>Field operator, control room operator, and production operator for plant and industrial environments.</p>
+            </article>
+            <article class="manpower-card">
+              <h3>Supervisors & Inspectors</h3>
+              <p>Foremen, civil/electrical/piping/mechanical supervisors, QA/QC inspectors, safety inspectors, welding inspectors, coating inspectors, and surveyors.</p>
+            </article>
+            <article class="manpower-card">
+              <h3>Engineers</h3>
+              <p>Civil, mechanical, electrical, instrumentation, piping, plumbing, process, project, planning, estimation, QA/QC, safety, drilling, reservoir, and pipeline engineers.</p>
+            </article>
+            <article class="manpower-card">
+              <h3>Management & Administration</h3>
+              <p>Project manager, construction manager, site manager, operations manager, QA/QC manager, contracts manager, document controller, procurement, logistics, HR, PRO, and safety officer.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-light trust-section">
+        <div class="container trust-layout">
+          <div class="section-copy">
+            <p class="eyebrow dark">Saudi Arabia Market</p>
+            <h2>Positioned to support leading organizations across Saudi Arabia.</h2>
+            <p>
+              RAIM International is positioned to support commercial organizations, developers, facilities teams,
+              hospitality operators, retail brands, and industrial stakeholders that value structured reporting,
+              coordinated site execution, and dependable delivery.
+            </p>
+            <p>
+              When you share verified client names and approved logo files, this section can be upgraded into a real
+              client logo wall with confirmed project relationships.
+            </p>
+          </div>
+
+          <div class="logo-cloud verified-cloud">
+            <span>Corporate Groups</span>
+            <span>Retail Chains</span>
+            <span>Hospitality Operators</span>
+            <span>Industrial Companies</span>
+            <span>Facility Management Teams</span>
+            <span>Developers & Consultants</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-light client-ready-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow dark">Saudi Market Leaders</p>
+            <h2>Selected major companies across the Saudi contracting landscape.</h2>
+          </div>
+
+          <div class="client-grid">
+            <article class="client-slot">
+              <div class="client-mark">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Saudi_Aramco_logo.svg" alt="Saudi Aramco logo" onerror="this.style.display='none'; this.parentElement.classList.add('is-text-fallback'); this.parentElement.textContent='Saudi Aramco';" />
+              </div>
+              <strong>Saudi Aramco</strong>
+              <p>Saudi energy and infrastructure leader</p>
+            </article>
+            <article class="client-slot">
+              <div class="client-mark">
+                <img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Saudi_Binladin_Group_logo.png" alt="Saudi Binladin Group logo" onerror="this.style.display='none'; this.parentElement.classList.add('is-text-fallback'); this.parentElement.textContent='Saudi Binladin Group';" />
+              </div>
+              <strong>Saudi Binladin Group</strong>
+              <p>Major construction and infrastructure contractor</p>
+            </article>
+            <article class="client-slot">
+              <div class="client-mark">
+                <img src="https://www.albawani.net/wp-content/uploads/2020/10/logo.png" alt="Al Bawani Company logo" onerror="this.style.display='none'; this.parentElement.classList.add('is-text-fallback'); this.parentElement.textContent='Al Bawani';" />
+              </div>
+              <strong>Al Bawani Company</strong>
+              <p>Large-scale Saudi contractor and project delivery group</p>
+            </article>
+            <article class="client-slot">
+              <div class="client-mark">
+                <img src="https://www.el-seif.com.sa/wp-content/uploads/2021/03/logo.png" alt="El Seif Engineering Contracting logo" onerror="this.style.display='none'; this.parentElement.classList.add('is-text-fallback'); this.parentElement.textContent='El Seif';" />
+              </div>
+              <strong>El Seif Engineering Contracting</strong>
+              <p>Engineering and contracting company in Saudi Arabia</p>
+            </article>
+            <article class="client-slot">
+              <div class="client-mark">
+                <img src="https://www.nesma-partners.com/wp-content/uploads/2020/09/logo.png" alt="Nesma & Partners logo" onerror="this.style.display='none'; this.parentElement.classList.add('is-text-fallback'); this.parentElement.textContent='Nesma & Partners';" />
+              </div>
+              <strong>Nesma &amp; Partners</strong>
+              <p>Industrial, civil, and infrastructure execution partner</p>
+            </article>
+            <article class="client-slot">
+              <div class="client-mark">
+                <img src="https://almabani.com/wp-content/uploads/2020/08/logo.png" alt="Almabani General Construction logo" onerror="this.style.display='none'; this.parentElement.classList.add('is-text-fallback'); this.parentElement.textContent='Almabani';" />
+              </div>
+              <strong>Almabani General Construction</strong>
+              <p>Saudi infrastructure and heavy construction company</p>
+            </article>
+            <article class="client-slot">
+              <div class="client-mark">
+                <img src="https://www.rtcc.com.sa/wp-content/uploads/2020/10/logo.png" alt="Al-Rashid Trading and Contracting Company logo" onerror="this.style.display='none'; this.parentElement.classList.add('is-text-fallback'); this.parentElement.textContent='RTCC';" />
+              </div>
+              <strong>Al-Rashid Trading &amp; Contracting</strong>
+              <p>Construction and trading support across Saudi Arabia</p>
+            </article>
+            <article class="client-slot">
+              <div class="client-mark">
+                <img src="https://www.alkifahcontracting.com/wp-content/uploads/2021/01/logo.png" alt="AlKifah Contracting Company logo" onerror="this.style.display='none'; this.parentElement.classList.add('is-text-fallback'); this.parentElement.textContent='AlKifah';" />
+              </div>
+              <strong>AlKifah Contracting Company</strong>
+              <p>Contracting and infrastructure development group</p>
+            </article>
+            <article class="client-slot">
+              <div class="client-mark">
+                <img src="https://www.sajco.com.sa/wp-content/uploads/2020/09/logo.png" alt="Shibh Al Jazira Contracting Company logo" onerror="this.style.display='none'; this.parentElement.classList.add('is-text-fallback'); this.parentElement.textContent='SAJCO';" />
+              </div>
+              <strong>Shibh Al Jazira Contracting Company</strong>
+              <p>Saudi contracting company with large execution footprint</p>
+            </article>
+            <article class="client-slot">
+              <div class="client-mark">
+                <img src="https://controltap.com/wp-content/uploads/2021/02/logo.png" alt="Mid Arabia Contracting Company logo" onerror="this.style.display='none'; this.parentElement.classList.add('is-text-fallback'); this.parentElement.textContent='Mid Arabia';" />
+              </div>
+              <strong>Mid Arabia Contracting Company</strong>
+              <p>Regional contracting presence and delivery support</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark coverage-section" id="coverage">
+        <div class="container split-layout">
+          <div class="coverage-panel">
+            <p class="eyebrow">Coverage</p>
+            <h2>KSA-focused support with scalable regional delivery.</h2>
+            <p>
+              We support projects through a delivery model designed for phased execution,
+              project coordination, technical compliance, and long-term support needs.
+            </p>
+            <a class="button primary" href="#contact">Discuss Your Project</a>
+          </div>
+
+          <div class="coverage-grid">
+            <article>
+              <strong>Riyadh</strong>
+              <span>Commercial & corporate execution</span>
+            </article>
+            <article>
+              <strong>Jeddah</strong>
+              <span>Interior, hospitality, and support works</span>
+            </article>
+            <article>
+              <strong>Dammam</strong>
+              <span>Industrial and technical coordination</span>
+            </article>
+            <article>
+              <strong>Regional</strong>
+              <span>Expandable delivery across the Middle East</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-light">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow dark">Company Data</p>
+            <h2>Business information ready to replace with your final official details.</h2>
+          </div>
+
+          <div class="data-grid">
+            <article>
+              <span>Registered Name</span>
+              <strong>RAIM International Contracting Company</strong>
+            </article>
+            <article>
+              <span>Domain</span>
+              <strong>raiminternational.sa.com</strong>
+            </article>
+            <article>
+              <span>Official Email</span>
+              <strong>info@raiminternational.sa.com</strong>
+            </article>
+            <article>
+              <span>Primary Coverage</span>
+              <strong>KSA • Middle East</strong>
+            </article>
+            <article>
+              <span>Phone / WhatsApp</span>
+              <strong>+966 5X XXX XXXX</strong>
+            </article>
+            <article>
+              <span>Head Office</span>
+              <strong>Riyadh, Saudi Arabia</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark" id="faq">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">FAQs</p>
+            <h2>Common questions clients ask before starting.</h2>
+          </div>
+
+          <div class="faq-list">
+            <details>
+              <summary>What types of projects does RAIM International handle?</summary>
+              <p>We support main contracting, subcontracting, manpower mobilization, technical upgrades, and maintenance scopes.</p>
+            </details>
+            <details>
+              <summary>Can you support both new projects and upgrades?</summary>
+              <p>Yes. We work on fresh build scopes, phased upgrades, operational improvements, and support packages.</p>
+            </details>
+            <details>
+              <summary>Do you provide turnkey delivery?</summary>
+              <p>Yes. Our structure is designed to cover planning, execution, testing, handover, and post-delivery support.</p>
+            </details>
+            <details>
+              <summary>Can this site be updated with our exact company data?</summary>
+              <p>Yes. The current sections are ready for your final phone number, address, email, domain, and project portfolio.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-light" id="contact">
+        <div class="container contact-panel">
+          <div class="section-copy">
+            <p class="eyebrow dark">Contact Us</p>
+            <h2>Let’s build the right scope for your next project.</h2>
+            <p>
+              Tell us your project type, location, and technical requirement. We will prepare the right direction for execution support.
+            </p>
+          </div>
+
+          <form class="contact-form">
+            <label>
+              <span>Name</span>
+              <input name="name" type="text" placeholder="Your name or company" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input name="email" type="email" placeholder="info@example.com" required />
+            </label>
+            <label>
+              <span>Project Type</span>
+              <input name="projectType" type="text" placeholder="Main contract, subcontract, manpower, civil, mechanical..." required />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="4" placeholder="Share your scope, timeline, and location." required></textarea>
+            </label>
+            <button class="button primary" type="submit">Send Inquiry</button>
+            <p class="form-status" data-form-status></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-layout">
+        <div>
+          <strong>RAIM INTERNATIONAL</strong>
+          <span>International Contracting Company</span>
+        </div>
+        <div class="footer-links">
+          <a href="https://raiminternational.sa.com">raiminternational.sa.com</a>
+          <a href="mailto:info@raiminternational.sa.com">info@raiminternational.sa.com</a>
+          <span>KSA • Middle East</span>
+        </div>
+        <p>© <span data-year></span> RAIM International. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
