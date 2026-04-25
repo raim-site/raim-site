@@ -2,100 +2,102 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0b2e1f;
+  color: #fff;
 }
 
 /* NAVBAR */
 .navbar {
-  position: absolute;
+  position: fixed;
   width: 100%;
-  top: 0;
-  left: 0;
-  padding: 15px 30px;
+  padding: 15px 40px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  z-index: 10;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
 }
 
 .logo {
-  height: 40px;
+  color: #2ecc71;
 }
 
-.quote-btn {
-  background: #22c55e;
-  color: white;
-  padding: 8px 15px;
-  text-decoration: none;
+/* BUTTON */
+.btn {
+  background: #2ecc71;
+  padding: 10px 20px;
   border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
 }
 
 /* HERO */
 .hero {
   height: 100vh;
   position: relative;
-  overflow: hidden;
 }
 
-.slider {
-  height: 100%;
-  position: relative;
-}
-
-.slide {
+.hero-slider img {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-
-  background-size: cover;
-  background-position: center;
-
+  object-fit: cover;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: 1s;
 }
 
-.slide.active {
+.hero-slider img.active {
   opacity: 1;
 }
 
-/* DARK OVERLAY */
-.slide::before {
-  content: "";
+.overlay {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
-  top: 0;
-  left: 0;
+  background: rgba(0,0,0,0.6);
 }
 
-/* CONTENT */
-.content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
+.hero-content {
+  position: relative;
   text-align: center;
-  width: 90%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.content h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
+/* SERVICES */
+.services {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fff;
+  color: #000;
 }
 
-.content p {
-  font-size: 16px;
-  margin-bottom: 15px;
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
 }
 
-.btn {
-  background: #22c55e;
-  padding: 10px 20px;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
+.card {
+  background: #f4f4f4;
+  padding: 25px;
+  width: 250px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
 }
