@@ -1,15 +1,8 @@
-let slides = document.querySelectorAll('.slide');
+let slides = document.querySelectorAll(".hero-slider img");
 let index = 0;
 
-function showSlide() {
-  slides.forEach(slide => slide.classList.remove('active'));
-  index++;
-
-  if (index >= slides.length) {
-    index = 0;
-  }
-
-  slides[index].classList.add('active');
-}
-
-setInterval(showSlide, 4000);
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 4000);
